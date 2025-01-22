@@ -98,7 +98,7 @@ const OrderDetails = () => {
 
         <tbody>
           {orderInformation.cartItems.map((item) => (
-            <tr key={item.product_id}>
+            <tr key={item._id}>
               <td>{item.product_id}</td>
               <td>
                 <div>
