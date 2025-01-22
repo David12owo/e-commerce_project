@@ -12,8 +12,8 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://tempxx.vercel.app/",
-      "https://tempxx.vercel.app",
+      "https://e-commerce-project-3xsy.vercel.app/",
+      "https://e-commerce-project-3xsy.vercel.app",
       "http://localhost:5173/",
       "http://localhost:5173",
     ],

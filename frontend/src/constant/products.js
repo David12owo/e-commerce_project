@@ -2,7 +2,7 @@ const productData = [
   {
     product_id: "3553",
     product_name: "Sonia Bravia A95K QD-OLED TV",
-    product_price: 46618900,
+    product_price: 3498,
     product_quantity: 3,
     product_description:
       "QD-OLED is a relatively new display technology, and this model represents the pinnacle of Sony's display technology,utilizes QD-OLED technology for stunning picture quality with deep blacks and vibrant colors,Features a unique Acoustic surface Audio+ system for immersive sound.",
@@ -12,7 +12,7 @@ const productData = [
   {
     product_id: "73636",
     product_name: "LG Signature OLED R TV",
-    product_price: 79698300,
+    product_price: 21999,
     product_quantity: 3,
     product_description:
       "A revolutionary rollable TV that can disappear into the base when not in use. Offers stunning OLED picture quality and a unique form factor,Its unique design and high price tag make it a truly exclusive and aspirational product.",
@@ -22,7 +22,7 @@ const productData = [
   {
     product_id: "2233",
     product_name: "Samsung Micro LED TV",
-    product_price: 17104844500,
+    product_price: 15000,
     product_quantity: 3,
     product_description:
       "Employs self-illuminating micro-LED modules for incredible brightness, contrast, and color accuracy. Offers modularity for customizable screen sizes and shapes,Micro-LED technology is still relatively new and expensive, making these TVs highly exclusive and sought after.",
@@ -31,7 +31,7 @@ const productData = [
   {
     product_id: "11222",
     product_name: "Hisense TriChroma Laser TV",
-    product_price: 621998445,
+    product_price: 3999,
     product_quantity: 3,
     product_description:
       "A short-throw projector that delivers a massive, ultra-high-definition image with vibrant colors and deep blacks,This technology offers a unique large-screen experience without the need for a massive TV or a dedicated home theater room.",
@@ -41,7 +41,7 @@ const productData = [
   {
     product_id: "2333",
     product_name: "Displace TV",
-    product_price: 621998445,
+    product_price: 2999,
     product_quantity: 3,
     product_description:
       "A revolutionary display that uses a system of interchangeable panels to create a large, seamless image,The unique display technology and the modular design make it a truly innovative and exclusive product.",
@@ -51,7 +51,7 @@ const productData = [
   {
     product_id: "88982",
     product_name: "C Seed 262 8K MicroLED TV",
-    product_price: 83814500000,
+    product_price: 53900,
     product_quantity: 3,
     product_description:
       "A massive 262-inch 8K MicroLED TV that delivers an unparalleled home theater experience,The sheer size and cutting-edge technology make it one of the most exclusive and expensive TVs available.",
@@ -61,7 +61,7 @@ const productData = [
   {
     product_id: "01982",
     product_name: "Loewe Bild I TV",
-    product_price: 622000000,
+    product_price: 4000,
     product_quantity: 3,
     product_description:
       "Known for its minimalist design and exceptional picture quality. Loewe is a German luxury brand with a long history of crafting high-end televisions.",
@@ -71,7 +71,7 @@ const productData = [
   {
     product_id: "63269",
     product_name: "Bang & Olufsen Beovision Harmony TV",
-    product_price: 29113740,
+    product_price: 23000,
     product_quantity: 3,
     product_description:
       "Combines stunning picture quality with a unique, sculptural design that integrates seamlessly into any living space. B&O is renowned for its focus on both aesthetics and audio quality.",
@@ -81,7 +81,7 @@ const productData = [
   {
     product_id: "36432",
     product_name: "Visioneers T1 TV",
-    product_price: 132175000,
+    product_price: 3450,
     product_quantity: 3,
     product_description:
       "A 177-inch 8K microLED TV that offers an unparalleled immersive viewing experience. Known for its extreme size and cutting-edge technology.",
@@ -91,7 +91,7 @@ const productData = [
   {
     product_id: "48617",
     product_name: "Philips The Signature OLED+986 TV",
-    product_price: 480124124,
+    product_price: 2499,
     product_quantity: 3,
     product_description:
       "A high-end OLED TV with a unique Ambilight feature that projects colored light onto the wall behind the TV, creating an immersive and ambient viewing experience.",

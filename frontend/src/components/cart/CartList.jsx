@@ -12,7 +12,7 @@ const CartList = () => {
       <div>
         <h1 className="text-3xl font-bold mb-10">Sorry No Item in Cart yet</h1>
         <Link
-          className="text-gray text-xl underline-offset-[10px] underline  text-gray-500 hover:text-black"
+          className="text-gray text-2xl underline-offset-[5px] underline  text-gray-500 hover:text-black"
           to={"/products"}
         >
           Shop Now!
