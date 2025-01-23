@@ -4,6 +4,7 @@ import express from "express";
 import cors from "cors";
 
 import orderRoutes from "./routes/ordersRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 import { connectToDatabase } from "./config/mongodbConnection.js";
 
 const PORT = process.env.PORT || 3000;
@@ -26,6 +27,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/api/v1/order", orderRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 app.listen(PORT, async () => {
   await connectToDatabase();

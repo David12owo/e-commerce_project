@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
-import { serverUrl } from "../../utils/helper";
+import { formatCurrency, serverUrl } from "../../utils/helper";
 import moment from "moment";
+import BackButton from "../../components/ui/buttons/BackButton";
 
 const OrderDetails = () => {
   const params = useParams();
@@ -42,53 +43,60 @@ const OrderDetails = () => {
   console.log(orderInformation);
 
   return (
-    <div className="max-w-[1000px] mx-auto p-4 py-16 bg-green-50 my-10 rounded-md">
-      <p className="bg-green-800 text-white  w-fit ">
+    <div className="max-w-[1000px] mx-auto p-4 py-16 bg-blue-50 my-10 rounded-md">
+      <BackButton />
+      <p className="text-black text-3xl font-medium my-3 w-fit rounded-md p-2 ">
         {moment(new Date(orderInformation?.createdAt)).format(
           "MMMM Do YYYY, h:mm:ss a"
         )}
       </p>
-      <h2>{orderInformation?.orderStatus}</h2>
+      <h3 className="bg-blue-500 text-white w-fit p-2 rounded-md">
+        {orderInformation?.orderStatus}
+      </h3>
 
-      <div>
-        <h2>Transaction details</h2>
-        <p>
+      <div className="border-2 p-3 rounded-md my-4 bg-blue-500">
+        <h2 className="text-2xl font-semibold text-white">
+          Transaction details
+        </h2>
+        <p className="text-gray-300">
           <strong>PayStack TransactionId: </strong>{" "}
           {orderInformation.reference.trxref}
         </p>
-        <p>
+        <p className="text-gray-300">
           <strong>Transaction status: </strong>{" "}
           {orderInformation.reference.status}
         </p>
-        <p>
+        <p className="text-gray-300">
           <strong>Payment: </strong>
           {orderInformation.reference.message}
         </p>
       </div>
 
-      <div>
-        <h2>Customer information</h2>
-        <p>
+      <div className="border-2 p-3 rounded-md my-4 bg-blue-500">
+        <h2 className="text-2xl font-semibold text-white">
+          Customer information
+        </h2>
+        <p className="text-gray-300">
           <strong>Name: </strong>{" "}
           {orderInformation.customerDeliveryInfo.customerName}
         </p>
-        <p>
+        <p className="text-gray-300">
           <strong>Email: </strong> {orderInformation.customerDeliveryInfo.email}
         </p>
-        <p>
+        <p className="text-gray-300">
           <strong>PhoneNo: </strong>{" "}
           {orderInformation.customerDeliveryInfo.phoneNumber}
         </p>
-        <p>
+        <p className="text-gray-300">
           <strong>Delivery Address: </strong>{" "}
           {orderInformation.customerDeliveryInfo.deliveryAddress}
         </p>
       </div>
 
-      <table>
+      <table className="bg-white p-2 border-2 rounded-md w-full">
         <thead>
-          <tr>
-            <th>Product Id</th>
+          <tr className="text-blue-800 text-left border-b">
+            <th className="py-2">Product Id</th>
             <th>Product image</th>
             <th>Product Name</th>
             <th>Product Price</th>
@@ -98,15 +106,19 @@ const OrderDetails = () => {
 
         <tbody>
           {orderInformation.cartItems.map((item) => (
-            <tr key={item._id}>
-              <td>{item.product_id}</td>
+            <tr className="border-b" key={item._id}>
+              <td className="py-6">{item.product_id}</td>
               <td>
                 <div>
-                  <img src={item.product_image} alt={item.product_name} />
+                  <img
+                    className="w-16 rounded-lg"
+                    src={item.product_image}
+                    alt={item.product_name}
+                  />
                 </div>
               </td>
               <td>{item.product_name}</td>
-              <td>{item.product_price}</td>
+              <td>{formatCurrency(item.product_price)}</td>
               <td>{item.product_quantity}</td>
             </tr>
           ))}

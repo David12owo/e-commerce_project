@@ -24,6 +24,14 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={
+              "hover:text-white transition-colors duration-500 text-lg"
+            }
+            to={"/login"}
+          >
+            Login
+          </NavLink>
+          <NavLink
+            className={
               "hover:text-white relative transition-colors duration-500"
             }
             to={"/cart"}

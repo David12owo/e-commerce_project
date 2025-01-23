@@ -7,6 +7,8 @@ import MainLayout from "./layout/MainLayout";
 import Checkout from "./pages/Checkout";
 import Admin from "./pages/protected/Admin";
 import OrderDetails from "./pages/protected/OrderDetails";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -26,6 +28,10 @@ function App() {
           <Route index element={<Admin />} />
           <Route path=":order_id" element={<OrderDetails />} />
         </Route>
+
+        <Route path="login" element={<Login />} />
+
+        <Route path="register" element={<Register />} />
       </Route>
     </Routes>
   );
