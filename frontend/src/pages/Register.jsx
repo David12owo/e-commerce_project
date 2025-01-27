@@ -1,6 +1,6 @@
 import { Button, Input } from "antd";
 import React from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import validator from "validator";
 import axios from "axios";
 import { serverUrl } from "../utils/helper";
@@ -13,6 +13,7 @@ const Register = () => {
   });
 
   const [isLoading, setIsLoading] = React.useState(false);
+  const navigate = useNavigate();
 
   async function handleUserRegistration() {
     if (validator.isEmpty(userFormData.name, { ignore_whitespace: true })) {
@@ -41,7 +42,9 @@ const Register = () => {
         `${serverUrl}/auth/register`,
         userFormData
       );
-      console.log(response);
+      if (response.data.status === "success") {
+        navigate("/login");
+      }
     } catch (error) {
       console.log(error);
     } finally {
@@ -83,7 +86,7 @@ const Register = () => {
           type="primary"
           size="large"
         >
-          Login
+          Sign up
         </Button>
 
         <p>
